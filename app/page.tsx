@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { MapPin, MessageSquare, TrendingUp, Zap } from 'lucide-react';
+import { BelagaviInlineText } from '@/components/BelagaviInlineText';
 import { supabase } from '@/lib/supabase';
 
 export default function Home() {
@@ -27,7 +28,9 @@ export default function Home() {
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
               S
             </div>
-            <span className="font-semibold text-lg hidden sm:inline">Solve for Belgavi</span>
+            <span className="font-semibold text-lg hidden sm:inline">
+              Solve for <BelagaviInlineText />
+            </span>
           </div>
           <nav className="flex items-center gap-4">
             {isAuthenticated ? (
@@ -57,7 +60,7 @@ export default function Home() {
       <section className="container max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 text-balance">
-            Fix Belgavi, <span className="text-primary">Together</span>
+            Fix <BelagaviInlineText />, <span className="text-primary">Together</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
             Report civic issues, connect with experts, and watch your community transform. Every issue reported is a step towards a better Belgavi.

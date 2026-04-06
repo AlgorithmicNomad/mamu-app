@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { BelagaviInlineText } from '@/components/BelagaviInlineText';
 import { supabase } from '@/lib/supabase';
 import { getIssues, updateIssue } from '@/lib/api';
 import type { Issue } from '@/lib/supabase';
@@ -98,7 +99,9 @@ export default function AdminPage() {
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
               S
             </div>
-            <span className="font-semibold text-lg hidden sm:inline">Solve for Belgavi</span>
+            <span className="font-semibold text-lg hidden sm:inline">
+              Solve for <BelagaviInlineText />
+            </span>
           </Link>
           <nav className="flex items-center gap-4">
             <Link href="/dashboard">
