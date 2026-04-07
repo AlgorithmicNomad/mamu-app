@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { BrandLogo } from '@/components/BrandLogo';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { MapPin, MessageSquare, TrendingUp, Zap } from 'lucide-react';
@@ -17,24 +18,34 @@ const ImageSlider = () => {
 
   const [current, setCurrent] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   const prev = () => {
-    setCurrent(current === 0 ? images.length - 1 : current - 1);
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   const next = () => {
-    setCurrent(current === images.length - 1 ? 0 : current + 1);
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
   return (
-    <div className="relative max-w-4xl mx-auto">
+    <div className="relative max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-xl">
       <img
         src={images[current]}
-        className="w-full h-[400px] object-cover rounded-xl"
+        alt={`Belagavi slide ${current + 1}`}
+        className="w-full h-[520px] md:h-[620px] object-cover rounded-2xl transition-all duration-700"
       />
 
       <button
         onClick={prev}
         className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full"
+        aria-label="Previous slide"
       >
         &lt;
       </button>
@@ -42,9 +53,23 @@ const ImageSlider = () => {
       <button
         onClick={next}
         className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full"
+        aria-label="Next slide"
       >
         &gt;
       </button>
+
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            aria-label={`Go to slide ${index + 1}`}
+            className={`h-2.5 rounded-full transition-all ${
+              current === index ? "w-8 bg-white" : "w-2.5 bg-white/50"
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 };
@@ -66,14 +91,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 backdrop-blur supports-[backdrop-filter]:bg-background/95">
         <div className="container flex h-16 max-w-7xl items-center justify-between mx-auto px-4">
           
-          <div className="flex items-center gap-3">
-            <img
-              src="/grid-log.png"
-              alt="Solve for Belagavi logo"
-              className="h-10 w-auto"
-            />
-            <span className="font-semibold text-lg hidden sm:inline">Solve for Belagavi</span>
-          </div>
+          <BrandLogo />
 
           <nav className="flex items-center gap-4">
             
@@ -105,7 +123,7 @@ export default function Home() {
       <section className="container max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 text-balance">
-            Fix Belagavi, <span className="text-primary">Together</span>
+            Fix <span className="text-primary">Belagavi, Together</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
             Report civic issues, connect with experts, and watch your community transform. Every issue reported is a step towards a better Belagavi.
@@ -122,7 +140,7 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="container max-w-7xl mx-auto px-4 py-20">
+        <section className="container max-w-7xl mx-auto px-4 py-24">
           <ImageSlider />
         </section>
 

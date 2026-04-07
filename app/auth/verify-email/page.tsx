@@ -27,7 +27,7 @@ export default function VerifyEmailPage() {
           <CardContent className="space-y-6">
             <div className="p-4 bg-secondary/10 rounded-lg border border-secondary/20">
               <p className="text-sm text-foreground">
-                A confirmation link has been sent to your email address. Click the link to verify your account and start using Solve for Belgavi.
+                A confirmation link has been sent to your email address. Click the link to verify your account and start using Solve for Belagavi.
               </p>
             </div>
 
@@ -50,7 +50,7 @@ export default function VerifyEmailPage() {
 
         <div className="text-center">
           <p className="text-sm text-muted-foreground">
-            Once verified, you can start reporting issues and making a difference in Belgavi.
+            Once verified, you can start reporting issues and making a difference in Belagavi.
           </p>
         </div>
       </div>

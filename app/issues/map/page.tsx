@@ -58,7 +58,7 @@ export default function IssuesMapPage() {
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
               S
             </div>
-            <span className="font-semibold text-lg hidden sm:inline">Solve for Belgavi</span>
+            <span className="font-semibold text-lg hidden sm:inline">Solve for Belagavi</span>
           </Link>
           <nav className="flex items-center gap-4">
             <Link href="/issues">

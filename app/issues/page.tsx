@@ -75,7 +75,7 @@ export default function IssuesPage() {
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
               S
             </div>
-            <span className="font-semibold text-lg hidden sm:inline">Solve for Belgavi</span>
+            <span className="font-semibold text-lg hidden sm:inline">Solve for Belagavi</span>
           </Link>
           <Link href="/issues/new">
             <Button size="sm" className="bg-primary hover:bg-primary/90">Report Issue</Button>
@@ -85,7 +85,7 @@ export default function IssuesPage() {
 
       <div className="container max-w-7xl mx-auto px-4 py-12">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">Issues in Belgavi</h1>
+          <h1 className="text-4xl font-bold mb-2">Issues in Belagavi</h1>
           <p className="text-muted-foreground">Browse and support issues being reported by your community</p>
         </div>
 

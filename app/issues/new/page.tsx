@@ -157,7 +157,7 @@ return (
 <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
 S
 </div>
-<span className="font-semibold text-lg hidden sm:inline">Solve for Belgavi</span>
+<span className="font-semibold text-lg hidden sm:inline">Solve for Belagavi</span>
 </Link>
 <Link href="/issues">
 <Button variant="ghost" size="sm">Back to Issues</Button>
@@ -169,7 +169,7 @@ S
 <div className="mb-8">
 <h1 className="text-4xl font-bold mb-2">Report an Issue</h1>
 <p className="text-muted-foreground">
-Help improve Belgavi by reporting civic issues. Your report will help authorities take action.
+Help improve Belagavi by reporting civic issues. Your report will help authorities take action.
 </p>
 </div>
 

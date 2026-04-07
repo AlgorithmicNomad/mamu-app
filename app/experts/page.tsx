@@ -43,7 +43,7 @@ export default function ExpertsPage() {
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
               S
             </div>
-            <span className="font-semibold text-lg hidden sm:inline">Solve for Belgavi</span>
+            <span className="font-semibold text-lg hidden sm:inline">Solve for Belagavi</span>
           </Link>
           <nav className="flex items-center gap-4">
             <Link href="/issues">
@@ -63,7 +63,7 @@ export default function ExpertsPage() {
             <h1 className="text-4xl font-bold">Our Experts</h1>
           </div>
           <p className="text-muted-foreground text-lg">
-            Meet the dedicated professionals helping improve Belgavi by reviewing and solving civic issues.
+            Meet the dedicated professionals helping improve Belagavi by reviewing and solving civic issues.
           </p>
         </div>
 

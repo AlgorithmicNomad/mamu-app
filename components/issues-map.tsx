@@ -62,7 +62,7 @@ export function IssuesMap({ issues, onIssueClick }: IssuesMapProps) {
 
     // Initialize map
     if (!map.current) {
-      map.current = L.map(mapContainer.current).setView([15.8642, 75.6318], 12); // Belgavi coordinates
+      map.current = L.map(mapContainer.current).setView([15.8642, 75.6318], 12); // Belagavi coordinates
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',

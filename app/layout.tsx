@@ -21,19 +21,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/grid-log.png',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/grid-log.png',
   },
   other: {
     'theme-color': '#FF9933',

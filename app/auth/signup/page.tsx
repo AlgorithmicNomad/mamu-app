@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { supabase } from '@/lib/supabase';
+import { BrandLogo } from '@/components/BrandLogo';
 import { AlertCircle } from 'lucide-react';
 
 export default function SignupPage() {
@@ -81,11 +82,11 @@ export default function SignupPage() {
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/30 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
-          <div className="w-12 h-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 font-bold text-lg">
-            S
+          <div className="flex justify-center mb-4">
+            <BrandLogo showText={false} imageClassName="h-14 w-auto" />
           </div>
           <h1 className="text-3xl font-bold mb-2">Join the Movement</h1>
-          <p className="text-muted-foreground">Start improving Belgavi today</p>
+          <p className="text-muted-foreground">Start improving Belagavi today</p>
         </div>
 
         <Card className="border-border/50">

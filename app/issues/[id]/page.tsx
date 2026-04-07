@@ -128,7 +128,7 @@ export default function IssuePage() {
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 w-full border-b backdrop-blur">
         <div className="container flex h-16 max-w-7xl items-center justify-between mx-auto px-4">
-          <Link href="/" className="font-semibold text-lg">Solve for Belgavi</Link>
+          <Link href="/" className="font-semibold text-lg">Solve for Belagavi</Link>
           <Link href="/issues">
             <Button variant="ghost" size="sm">Back to Issues</Button>
           </Link>

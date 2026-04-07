@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { supabase } from '@/lib/supabase';
+import { BrandLogo } from '@/components/BrandLogo';
 import { AlertCircle } from 'lucide-react';
 
 export default function LoginPage() {
@@ -45,11 +46,11 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/30 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
-          <div className="w-12 h-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 font-bold text-lg">
-            S
+          <div className="flex justify-center mb-4">
+            <BrandLogo showText={false} imageClassName="h-14 w-auto" />
           </div>
           <h1 className="text-3xl font-bold mb-2">Welcome Back</h1>
-          <p className="text-muted-foreground">Sign in to continue solving Belgavi's issues</p>
+          <p className="text-muted-foreground">Sign in to continue solving Belagavi's issues</p>
         </div>
 
         <Card className="border-border/50">
@@ -101,7 +102,7 @@ export default function LoginPage() {
                   <div className="w-full border-t border-border/50" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-card text-muted-foreground">New to Belgavi?</span>
+                  <span className="px-2 bg-card text-muted-foreground">New to Belagavi?</span>
                 </div>
               </div>
 
